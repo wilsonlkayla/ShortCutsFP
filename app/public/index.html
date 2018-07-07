@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/png"
+          href="./icon.png">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShortCutz</title>
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+      <div class="body">
+  <section class="hero is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+      
+<!-- Button and Modals -->
+<!-- -->
+<!-- -->
+<!-- -->
+<div class="button-container"> <!-- div to hold both buttons -->
+  <!-- Modal Button -->
+  <button id="modalBtn" class="button">Make an Appointment</button>
+  <!-- View customers button -->
+  <a href="./table"><button class="btn btn-primary button">
+      <span class="glyphicon glyphicon-list-alt"></span>
+      View Customers
+      </button></a>
+  <!-- -->
+</div>
+<!-- -->
+<div id="simpleModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+        <span class="closeBtn">&times;</span>
+        <h2>Make an Appointment</h2>
+    </div>
+    <div class="modal-body">
+     <div class="field">
+        <!-- Their Name -->
+        <p class="cool-font">Name</p>
+        <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+        <br>
+        <!-- Their Phone Number -->
+        <p class="cool-font">Phone</p>
+        <input class="form-control" type="text" id="phone" placeholder="(ex. 704-450-3978)">
+        <br>
+        <!-- The time the appointment starts -->
+        <p class="cool-font">Time</p>
+        <input class="form-control" type="text" id="time" placeholder="What is your availability? (3:00 pm)">
+        <!-- The service they want -->
+        <p class="cool-font">What they would like</p>
+        <textarea class="form-control" rows="3" id="customer-box" placeholder="What do you want the barber to do?"></textarea>
+        <br>
+        <!-- Submit Button -->
+        <button id="customer-submit" class="btn btn-lg pull-right">Submit!</button>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer List goes here -->
+
+      <script type="text/javascript" src="js/display.js"></script>
+      </div>
+</body>
+</html>
+<script type="text/javascript">
+// Get modal element
+var modal = document.getElementById('simpleModal');
+// Get open modal button
+var modalBtn = document.getElementById('modalBtn');
+// Get close button
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+// Listen for open click
+modalBtn.addEventListener('click', openModal);
+// Listen for close click
+closeBtn.addEventListener('click', closeModal);
+// Listen for outside click
+window.addEventListener('click', outsideClick);
+// Function to open modal
+function openModal(){
+  modal.style.display = 'block';
+}
+// Function to close modal
+function closeModal(){
+  modal.style.display = 'none';
+}
+// Function to close modal if outside click
+function outsideClick(e){
+  if(e.target == modal){
+    modal.style.display = 'none';
+  }
+}
+</script> 
